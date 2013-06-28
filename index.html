@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title></title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
-<link rel="stylesheet" href="jquery-ui.css" />
-<link rel="stylesheet" href="lightbox.css" />
-<script src="jquery-1.8.3.js"> </script>
-<script src="jquery.mobile-1.1.0.min.js"></script>
-<script src="lightbox.js"></script>
-<script>jQuery.noConflict();</script>
-<script>
-   $(document).ready(function(){
-	//   alert('hi');
-// alert("a[rel^='prettyPhoto']");
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> </title>
+  
+  <script src="jquery-1.7.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  
+  
+  <link rel="stylesheet" type="text/css" href="result-light.css">
+  
+    
+    
+      <script type='text/javascript' src="jquery.fancybox.pack.js"></script>
+    
+  
+    
+      <link rel="stylesheet" type="text/css" href="jquery.fancybox.css">
+    
+    
+  
+  <style type='text/css'>
+    
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$(document).ready(function() {
+    // initialize the lightbox 
+    $('.fancybox').fancybox({
+        beforeLoad: function() {
+            var windowsize = $(window).width();
+            // test the viewport size to see if it's smaller than 480px
+            if (windowsize < 480) {
+                // cancel the lightbox and load the link url
+                $.fancybox.cancel();
+            }
+        }
+    });
 });
+});//]]>  
+
 </script>
+
+
 </head>
 <body>
-<article id="what" data-role="page">
-  <div data-role="content">
-    <div id="main-content">
-      <p class="titletext"> What is Breast cancer? </p>
-      <div class="clear"> </div>
-      <p> Breast cancer is a form of cancer that
-        affects the cells of the breast.</p>
-      <div class="clear"> </div>
-      <p>In breast cancer, cells in the breast
-        become abnormal and multiply
-        without control, leading to 
-        formation of a tumor.</p>
-      <br/>
-      <!--     <div id="an-obj-2" class="gallery clearfix"> 
-<a href="1-07.png" rel="prettyPhoto"><img src="whatisimg.png" width="195" height="193"/></a>        
-        </div> -->
-      <div class="single"> <a rel="lightbox" href="1-07.png">
-        <div> <img src="whatisimg.png"  class="centerimg"></div>
-        </a> </div>
-    </div>
-  </div>
-</article>
+  <a class="fancybox" rel="gallery1" href="1-07.png" title=" test">
+    <img src="whatisimg.png" alt="" />
+</a>
+  
 </body>
+
+
 </html>
