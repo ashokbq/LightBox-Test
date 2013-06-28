@@ -1,38 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title></title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
-<link rel="stylesheet" href="jquery-ui.css" />
-<link rel="stylesheet" href="lightbox.css" />
-<script src="jquery-1.7.1.min.js"> </script>
-<script src="jquery.mobile-1.1.0.min.js"></script>
-<script src="lightbox.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="imgzoom.css" />
+ <script type="text/javascript" src="jquery.min.js"></script>
 
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="jquery.imgzoom.pack.js"></script>
+<script type="text/javascript">
+ $(function () {
+     $('#img1').imgZoom({ showOverlay: true });
+     $('#img2').imgZoom({ showOverlay: true, opacity: 0 });
+     $('#img3').imgZoom({ showOverlay: true, rotate: true, duration: 1000 });
+ });
+</script>
 </head>
+
 <body>
-<article id="what" data-role="page">
-  <div data-role="content">
-    <div id="main-content">
-      <p class="titletext"> What is Breast cancer? </p>
-      <div class="clear"> </div>
-      <p> Breast cancer is a form of cancer that
-        affects the cells of the breast.</p>
-      <div class="clear"> </div>
-      <p>In breast cancer, cells in the breast
-        become abnormal and multiply
-        without control, leading to 
-        formation of a tumor.</p>
-      <br/>
-      <!--     <div id="an-obj-2" class="gallery clearfix"> 
-<a href="1-07.png" rel="prettyPhoto"><img src="whatisimg.png" width="195" height="193"/></a>        
-        </div> -->
-      <div class="single"> <a rel="lightbox" href="1-07.png">
-        <div> <img src="whatisimg.png"  class="centerimg"></div>
-        </a> </div>
-    </div>
-  </div>
-</article>
+  <a href="1-07.png" title=" test">
+    <img src="whatisimg.png" alt="" title="testing" id="img2"/>
+</a>
 </body>
 </html>
